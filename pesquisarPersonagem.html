@@ -38,51 +38,7 @@
     </section>
 
 
-    <script>
-        const txtPersonagem = document.getElementById('txtPersonagem')
-        const btnPesquisar = document.getElementById('btnPesquisar')
-
-        const container = document.getElementById('pesquisar-container')
-
-        function procurarPersonagem(userID) {
-            return fetch("https://rickandmortyapi.com/api/character/" + userID)
-                .then(function (resposta) {
-                    return resposta.json()
-                })
-        }
-
-        async function listarPersonagem() {
-            let valorCampo = txtPersonagem.value
-            const personagem = await procurarPersonagem(valorCampo)
-            let nomePersonagem = personagem.name
-            let especiaPersonagem = personagem.species
-            let idPersonagem = personagem.id
-            let imagemPersonagem = personagem.image
-
-
-            console.log(nomePersonagem)
-
-            const coluna = document.createElement('div')
-            coluna.className = 'd-flex justify-content-center'
-
-            coluna.innerHTML = `
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center">
-                            <img src="${imagemPersonagem}" alt="${nomePersonagem}" class="personagem-img mb-2 img-fluid rounded">
-                            <h5 class="card-tile">${nomePersonagem}</h5>
-                            <p class="card-text"><strong>Espécie: </strong> ${especiaPersonagem}</p>
-                        </div>
-                        <div class="card-footer text-center"> 
-                            <p class="card-text text-muted"><strong>Id #</strong>${idPersonagem}</p>
-                        </div>
-                    </div>
-                `
-            container.appendChild(coluna)
-            txtPersonagem.value = ""
-        }
-
-
-
+    <script src="./script.js">
     </script>
 </body>
 
