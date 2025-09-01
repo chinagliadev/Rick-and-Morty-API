@@ -57,26 +57,6 @@ async function carregarPersonagens() {
         containerRick.appendChild(coluna);
     }
 
-    document.querySelectorAll('.salvar-btn').forEach(btn => {
-        btn.addEventListener('click', async function () {
-            const personagem = {
-                id: this.dataset.id,
-                nome: this.dataset.nome,
-                imagem: this.dataset.imagem
-            };
-
-            const resposta = await fetch('./salvarPersonagem.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(personagem)
-            });
-
-            const resultado = await resposta.text();
-            alert(resultado); 
-        });
-    });
 }
 
 async function listarPersonagem() {
