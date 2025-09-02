@@ -21,24 +21,6 @@ async function carregarPersonagens() {
         const coluna = document.createElement('div');
         coluna.className = 'col';
 
-        // coluna.innerHTML = `
-        //     <div class="card h-100 shadow-sm">
-        //         <div class="card-body text-center">
-        //             <img src="${personagem.image}" alt="${personagem.name}" class="personagem-img mb-2 img-fluid rounded">
-        //             <h5 class="card-title">${personagem.name}</h5>
-        //             <p class="card-text"><strong>Espécie:</strong> ${personagem.species}</p>
-        //             <button class="btn btn-success salvar-btn" 
-        //                 data-id="${personagem.id}" 
-        //                 data-nome="${personagem.name}" 
-        //                 data-imagem="${personagem.image}">
-        //                 Salvar Personagem
-        //             </button>
-        //         </div>
-        //         <div class="card-footer text-center">
-        //             <p class="card-text text-muted"><strong>ID #</strong>${personagem.id}</p>
-        //         </div>
-        //     </div>
-        // `;
 
                 coluna.innerHTML = `
             <div class="card h-100 shadow-sm">
@@ -46,7 +28,7 @@ async function carregarPersonagens() {
                     <img src="${personagem.image}" alt="${personagem.name}" class="personagem-img mb-2 img-fluid rounded">
                     <h5 class="card-title">${personagem.name}</h5>
                     <p class="card-text"><strong>Espécie:</strong> ${personagem.species}</p>
-                    <a class="btn btn-success" href="./exibirPersonagem.html?id=${idPersonagem}">Ver mais
+                    <a class="btn btn-success" href="./exibirPersonagem.php?id=${idPersonagem}">Ver mais
                     </a>
                 </div>
                 <div class="card-footer text-center">

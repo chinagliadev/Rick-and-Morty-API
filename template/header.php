@@ -13,28 +13,21 @@
     <header class="text-center mt-3 container">
         <nav class="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Rick and Morty API</a>
+                <a class="navbar-brand" href="index.php">Rick and Morty API</a>
 
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Listar Personagens</a>
+                        <a class="nav-link" href="index.php">Listar Personagens</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="pesquisarPersonagem.html">Pesquisar Personagem</a>
+                        <a class="nav-link" href="pesquisarPersonagem.php">Pesquisar Personagem</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="salvos.php">Personagem salvos</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
-    <section class="container mt-5">
-        <main id="rick-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-gap-4">
-    
-        </main>
-    </section>
-
-<script src="./script.js"></script>        
-</body>
-
-</html>

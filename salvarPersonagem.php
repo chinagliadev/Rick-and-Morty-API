@@ -24,8 +24,6 @@ $stmt->execute([$id]);
 
 if ($stmt->rowCount() > 0) {
     echo "Personagem já salvo.";
-    
-
 } else {
     $insert = $conn->prepare("INSERT INTO personagem (id, nome, imagem) VALUES (:id, :nome, :imagem)");
     $insert->execute([
